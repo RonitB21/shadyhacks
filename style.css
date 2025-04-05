@@ -2,210 +2,256 @@
 /* 1) BODY & BACKGROUND   */
 /* ---------------------- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  
-    /* A vibrant, modern gradient background */
-    background: linear-gradient(to bottom, #000000, #243B55);
-    min-height: 100vh;
-    overflow-x: hidden;
-  
-    /* We'll position content with normal block flow,
-       but #particles-js is fixed behind everything. */
-    /* Remove or modify any flex styling from before
-       if you want the page to scroll normally. */
-  }
-  #cardContent{
-    color: #fff;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* A vibrant, modern gradient background */
+  background: linear-gradient(to bottom, #000000, #243B55);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-  /* The particles container is placed behind content */
-  #particles-js {
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* ensures it's behind main content */
-  }
-  
-  /* Wrap main content in a container that sits above the particles */
-  .main-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    min-height: 100vh;
-    /* Center your content or structure it as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  /* ---------------------- */
-  /* 2) LINKS & HEADINGS    */
-  /* ---------------------- */
-  a {
-    text-decoration: none;
-    color: #fff; /* default link color */
-  }
-  
-  .greetings {
-    color: white;
-    text-align: center;
-    /* Optional semi-transparent background if you want a highlight
-       behind the greeting area. You can remove or adjust as needed. */
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  /* ---------------------- */
-  /* 3) BUTTONS             */
-  /* ---------------------- */
-  .buttons{
-    padding-top: 20px;
-  }
-  .button-container {
-    margin-top: 20px;
-  }
-  .themeheading{
-    padding-top: 20px;
-  }
-  
-  .big-button {
-    display: inline-block;
-    padding: 20px 40px;
-    margin: 10px;
-    background-color: #1e1f64;
-    border-radius: 8px;
-    font-size: 1.5em;
-    color: #fff;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .big-button:hover {
-    background-color: #1e1f64;
-    transform: translateY(-3px);
-  }
-  
-  /* ---------------------- */
-  /* 4) FLASHCARDS STYLES   */
-  /* ---------------------- */
-  .container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  .flashcard {
-    background-color: #1e1f64;
-    width: 300px;
-    height: 200px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content {
-    font-size: 1.2em;
-    padding: 20px;
-  }
-  
-  .buttons button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1e1f64;
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .buttons button:hover {
-    background-color: #1e1f64;
-    transform: translateY(-3px);
-  }
-  
-  /* ---------------------- */
-  /* 5) BACK BUTTON         */
-  /* ---------------------- */
-  .back {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .back a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    background-color: #1e1f64;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .back a:hover {
-    background-color: #1e1f64;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* ---------------------- */
-  /* 6) CALCULATOR STYLES   */
-  /* ---------------------- */
-  .calculator-container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  #display {
-    width: 90%;
-    max-width: 300px;
-    height: 40px;
-    margin-bottom: 10px;
-    text-align: right;
-    font-size: 1.5em;
-    padding: 5px;
-  }
-  
-  .calculator-buttons {
-    width: 90%;
-    max-width: 300px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .calc-btn {
-    padding: 20px;
-    font-size: 1.2em;
-    background-color: #1e1f64;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .calc-btn:hover {
-    background-color: #7f7f7f;
-    transform: translateY(-3px);
-  }
-  
+/* Particles background (if used) */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ---------------------- */
+/* 2) SPLASH SCREEN       */
+/* ---------------------- */
+#splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: transparent;
+}
+
+#splash h1 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.big-button {
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 10px;
+  background-color: #1e1f64;
+  border-radius: 8px;
+  font-size: 1.5em;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.big-button:hover {
+  background-color: #1e1f64;
+  transform: translateY(-3px);
+}
+
+/* ---------------------- */
+/* 3) MAIN & GRID LAYOUT  */
+/* ---------------------- */
+#main {
+  padding: 20px;
+}
+#calcEquals{
+  padding: 20px;
+  font-size: 1.2em;
+  background-color: #1b1c32;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#scoreTracker {
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: #1e1f64;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Each quadrant section */
+#grid-container section {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+/* ---------------------- */
+/* 4) FLASHCARDS STYLES   */
+/* ---------------------- */
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.flashcard {
+  background-color: #1e1f64;
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  font-size: 1.2em;
+  padding: 20px;
+  color: #fff;
+}
+
+.buttons {
+  padding-top: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1f64;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #1e1f64;
+  transform: translateY(-3px);
+}
+
+.back {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1e1f64;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back a:hover {
+  background-color: #1e1f64;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------------- */
+/* 5) CALCULATOR STYLES   */
+/* ---------------------- */
+.calculator-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#display {
+  width: 90%;
+  max-width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.calculator-buttons {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calc-btn {
+  padding: 20px;
+  font-size: 1.2em;
+  background-color: #1e1f64;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.calc-btn:hover {
+  background-color: #7f7f7f;
+  transform: translateY(-3px);
+}
+
+/* ---------------------- */
+/* 6) QUIZ STYLES         */
+/* ---------------------- */
+#quiz {
+  text-align: center;
+}
+
+#quiz button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1f64;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#quiz button:hover {
+  background-color: #1e1f64;
+  transform: translateY(-3px);
+}
+
+/* ---------------------- */
+/* 7) NOTES STYLES        */
+/* ---------------------- */
+/* ---------------------- */
+/* 7) NOTES STYLES        */
+/* ---------------------- */
+#notes {
+  text-align: center;
+}
+
+#notes textarea {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 1em;
+}
