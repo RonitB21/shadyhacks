@@ -16,7 +16,10 @@ body {
     /* Remove or modify any flex styling from before
        if you want the page to scroll normally. */
   }
-  
+  #cardContent{
+    color: #fff;
+  }
+
   /* The particles container is placed behind content */
   #particles-js {
     position: fixed;
@@ -60,6 +63,9 @@ body {
   /* ---------------------- */
   /* 3) BUTTONS             */
   /* ---------------------- */
+  .buttons{
+    padding-top: 10px;
+  }
   .button-container {
     margin-top: 20px;
   }
@@ -68,7 +74,7 @@ body {
     display: inline-block;
     padding: 20px 40px;
     margin: 10px;
-    background-color: #4CAF50;
+    background-color: #1e1f64;
     border-radius: 8px;
     font-size: 1.5em;
     color: #fff;
@@ -76,7 +82,7 @@ body {
   }
   
   .big-button:hover {
-    background-color: #45a049;
+    background-color: #1a2061;
     transform: translateY(-3px);
   }
   
@@ -93,7 +99,7 @@ body {
   }
   
   .flashcard {
-    background-color: #fff;
+    background-color: #000dff;
     width: 300px;
     height: 200px;
     margin: 20px auto;
@@ -114,7 +120,7 @@ body {
     margin: 0 10px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #000dff;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
@@ -122,7 +128,7 @@ body {
   }
   
   .buttons button:hover {
-    background-color: #45a049;
+    background-color: #000dff;
     transform: translateY(-3px);
   }
   
@@ -138,7 +144,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #000dff;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 1em;
@@ -147,7 +153,7 @@ body {
   }
   
   .back a:hover {
-    background-color: #45a049;
+    background-color: #000dff;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
@@ -186,7 +192,7 @@ body {
   .calc-btn {
     padding: 20px;
     font-size: 1.2em;
-    background-color: #4CAF50;
+    background-color: #001aff;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -195,7 +201,7 @@ body {
   }
   
   .calc-btn:hover {
-    background-color: #45a049;
+    background-color: #7f7f7f;
     transform: translateY(-3px);
   }
   
