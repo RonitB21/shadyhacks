@@ -5,10 +5,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  /* A vibrant, modern gradient background */
   background: linear-gradient(to bottom, #000000, #243B55);
-  min-height: 100vh;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Particles background (if used) */
@@ -60,19 +59,10 @@ body {
 /* 3) MAIN & GRID LAYOUT  */
 /* ---------------------- */
 #main {
-  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
-#calcEquals{
-  padding: 20px;
-  font-size: 1.2em;
-  background-color: #1b1c32;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  grid-column: 1 / -1;
-  transition: background-color 0.3s, transform 0.3s;
-}
+
 #scoreTracker {
   color: white;
   position: fixed;
@@ -82,20 +72,30 @@ body {
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
+  z-index: 10;
 }
 
 #grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-rows: 60% 40%;
+  height: 100vh;
+  width: 100vw;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Each quadrant section */
+/* Remove the default border-radius so we can control it with quadrant classes */
 #grid-container section {
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px;
-  border-radius: 8px;
-  min-height: 300px;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---------------------- */
@@ -103,15 +103,14 @@ body {
 /* ---------------------- */
 .container {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .flashcard {
   background-color: #1e1f64;
-  width: 300px;
-  height: 200px;
-  margin: 20px auto;
+  width: 250px;
+  height: 150px;
+  margin: 10px auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
@@ -120,23 +119,23 @@ body {
 }
 
 .content {
-  font-size: 1.2em;
-  padding: 20px;
+  font-size: 1em;
+  padding: 15px;
   color: #fff;
 }
 
 .buttons {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .buttons button {
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 8px 16px;
+  margin: 0 5px;
   border: none;
   border-radius: 5px;
   background-color: #1e1f64;
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -147,7 +146,7 @@ body {
 }
 
 .back {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -156,9 +155,9 @@ body {
   text-decoration: none;
   color: #fff;
   background-color: #1e1f64;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
-  font-size: 1em;
+  font-size: 0.9em;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -174,32 +173,31 @@ body {
 /* ---------------------- */
 .calculator-container {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 #display {
   width: 90%;
-  max-width: 300px;
-  height: 40px;
+  max-width: 240px;
+  height: 35px;
   margin-bottom: 10px;
   text-align: right;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 5px;
 }
 
 .calculator-buttons {
   width: 90%;
-  max-width: 300px;
+  max-width: 240px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 8px;
 }
 
 .calc-btn {
-  padding: 20px;
-  font-size: 1.2em;
+  padding: 16px;
+  font-size: 1em;
   background-color: #1e1f64;
   border: none;
   border-radius: 5px;
@@ -213,11 +211,34 @@ body {
   transform: translateY(-3px);
 }
 
+#calcEquals {
+  padding: 16px;
+  font-size: 1em;
+  background-color: #1b1c32;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
 /* ---------------------- */
 /* 6) QUIZ STYLES         */
 /* ---------------------- */
 #quiz {
   text-align: center;
+}
+
+#quizAnswerInput {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px 12px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 10px;
 }
 
 #quiz button {
@@ -240,18 +261,59 @@ body {
 /* ---------------------- */
 /* 7) NOTES STYLES        */
 /* ---------------------- */
-/* ---------------------- */
-/* 7) NOTES STYLES        */
-/* ---------------------- */
 #notes {
   text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  /* Remove default border-radius for grid sections */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner container for scrollable content in Notes */
+#notes .notes-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 #notes textarea {
   display: block;
   margin: 0 auto;
   width: 90%;
-  max-width: 600px;
+  max-width: 400px;
+  height: 150px;
   padding: 10px;
   font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ---------------------- */
+/* 8) CUSTOM QUADRANT BORDERS (Inner Rounded Corners Only) */
+/* ---------------------- */
+/* Remove border-radius from the grid sections (outer edges will be square) */
+.quadrant {
+  border-radius: 0;
+}
+
+/* For a 2x2 grid, add rounding only to the inner corners: */
+.top-left {
+  border-bottom-right-radius: 8px;
+}
+
+.top-right {
+  border-bottom-left-radius: 8px;
+}
+
+.bottom-left {
+  border-top-right-radius: 8px;
+}
+
+.bottom-right {
+  border-top-left-radius: 8px;
 }

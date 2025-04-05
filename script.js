@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         heading: "Math",
         cards: [
-          { question: "What is the formula that Pythagoras created?", answer: "Pythagorean theorem" }
+          { question: "What is the formula that Pythagoras created?", answer: "Pythagorean theorem" },
+          { question: "How many inches are in 1 foot?", answer: "12" }
         ]
       },
       {
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const calcDisplay = document.getElementById('display');
     const calcButtons = document.querySelectorAll('.calc-btn');
     let calcExpression = '';
-    
+  
     calcButtons.forEach(btn => {
       btn.addEventListener('click', function() {
         const value = btn.getAttribute('data-value');
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
     });
-    
+  
     document.getElementById('calcEquals').addEventListener('click', function() {
       try {
         const result = eval(calcExpression);
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /* ---------- QUIZ FUNCTIONALITY ---------- */
     const quizCards = themes.flatMap(theme => theme.cards);
     const shuffledQuizCards = quizCards.sort(() => Math.random() - 0.5);
-    
+  
     let currentQuizIndex = 0;
     let totalCorrect = 0;
   
@@ -114,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
     function loadQuizQuestion() {
       if (currentQuizIndex >= shuffledQuizCards.length) {
-        // Quiz completed
         quizQuestionEl.textContent = `You answered ${totalCorrect} out of ${shuffledQuizCards.length} questions correctly.`;
         quizAnswerInput.style.display = 'none';
         quizSubmit.style.display = 'none';
@@ -136,15 +136,26 @@ document.addEventListener("DOMContentLoaded", function() {
         totalCorrect++;
         score++;
         document.getElementById('score').textContent = score;
+  
+        currentQuizIndex++;
+        setTimeout(() => {
+          loadQuizQuestion();
+        }, 1500);
       } else {
-        quizResultEl.textContent = `Incorrect. The correct answer was: ${currentQuizCard.answer}`;
+        let countdown = 4;
+        quizResultEl.textContent = `Incorrect. The correct answer was: ${currentQuizCard.answer}. Please wait for the next question (${countdown}s)`;
+  
+        const interval = setInterval(() => {
+          countdown--;
+          if (countdown > 0) {
+            quizResultEl.textContent = `Incorrect. The correct answer was: ${currentQuizCard.answer}. Please wait for the next question (${countdown}s)`;
+          } else {
+            clearInterval(interval);
+            currentQuizIndex++;
+            loadQuizQuestion();
+          }
+        }, 1000);
       }
-  
-      currentQuizIndex++;
-  
-      setTimeout(() => {
-        loadQuizQuestion();
-      }, 1500);
     });
   
     loadQuizQuestion();

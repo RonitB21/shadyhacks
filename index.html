@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Optional particles background container -->
-  <div id="particles-js"></div>
-
   <!-- Splash Screen -->
   <div id="splash">
     <h1>Welcome to Study.X!</h1>
@@ -23,22 +20,18 @@
 
     <!-- Grid Container for 4 Quadrants -->
     <div id="grid-container">
+      
       <!-- Quadrant 1: Flashcards Section -->
-      <section id="flashcards">
+      <section id="flashcards" class="quadrant top-left">
         <div class="container">
-          <h1>Flashcards</h1>
-          <!-- Dynamic theme heading -->
           <h2 id="themeHeading"></h2>
-          <!-- Flashcard element -->
           <div class="flashcard" id="flashcard">
             <div class="content" id="cardContent"></div>
           </div>
-          <!-- Buttons for flashcard controls -->
           <div class="buttons">
             <button id="flipBtn">Flip</button>
             <button id="nextBtn">Next</button>
           </div>
-          <!-- Back link (optional for navigation) -->
           <div class="back">
             <a href="index.html">Back to Home</a>
           </div>
@@ -46,9 +39,8 @@
       </section>
 
       <!-- Quadrant 2: Calculator Section -->
-      <section id="calculator">
+      <section id="calculator" class="quadrant top-right">
         <div class="calculator-container">
-          <h1>Calculator</h1>
           <input type="text" id="display" readonly>
           <div class="calculator-buttons">
             <button class="calc-btn" data-value="7">7</button>
@@ -73,7 +65,7 @@
       </section>
 
       <!-- Quadrant 3: Quiz Section -->
-      <section id="quiz">
+      <section id="quiz" class="quadrant bottom-left">
         <h1>Quiz</h1>
         <div id="quizContainer">
           <p id="quizQuestion"></p>
@@ -84,10 +76,13 @@
       </section>
 
       <!-- Quadrant 4: Notes Section -->
-      <section id="notes">
+      <section id="notes" class="quadrant bottom-right">
         <h1>Notes</h1>
-        <textarea id="notesArea" rows="10" cols="50" placeholder="Take your notes here..."></textarea>
+        <div class="notes-content">
+          <textarea id="notesArea" rows="10" cols="50" placeholder="Take your notes here..."></textarea>
+        </div>
       </section>
+
     </div>
   </div>
   <script src="script.js"></script>
