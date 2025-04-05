@@ -1,25 +1,65 @@
-/* Global Styles */
+/* ---------------------- */
+/* 1) BODY & BACKGROUND   */
+/* ---------------------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+  
+    /* A vibrant, modern gradient background */
+    background: linear-gradient(to bottom, #141E30, #243B55);
+    min-height: 100vh;
+    overflow-x: hidden;
+  
+    /* We'll position content with normal block flow,
+       but #particles-js is fixed behind everything. */
+    /* Remove or modify any flex styling from before
+       if you want the page to scroll normally. */
+  }
+  
+  /* The particles container is placed behind content */
+  #particles-js {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* ensures it's behind main content */
+  }
+  
+  /* Wrap main content in a container that sits above the particles */
+  .main-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    /* Center your content or structure it as needed */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    flex-direction: column;
   }
   
+  /* ---------------------- */
+  /* 2) LINKS & HEADINGS    */
+  /* ---------------------- */
   a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* default link color */
   }
   
-  /* Greetings Page Styles */
   .greetings {
     text-align: center;
+    /* Optional semi-transparent background if you want a highlight
+       behind the greeting area. You can remove or adjust as needed. */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
   }
   
+  /* ---------------------- */
+  /* 3) BUTTONS             */
+  /* ---------------------- */
   .button-container {
     margin-top: 20px;
   }
@@ -32,16 +72,24 @@ body {
     border-radius: 8px;
     font-size: 1.5em;
     color: #fff;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
   }
   
   .big-button:hover {
     background-color: #45a049;
+    transform: translateY(-3px);
   }
   
-  /* Flashcards Page Styles */
+  /* ---------------------- */
+  /* 4) FLASHCARDS STYLES   */
+  /* ---------------------- */
   .container {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
   }
   
   .flashcard {
@@ -70,20 +118,50 @@ body {
     color: #fff;
     font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
   }
   
   .buttons button:hover {
     background-color: #45a049;
+    transform: translateY(-3px);
+  }
+  
+  /* ---------------------- */
+  /* 5) BACK BUTTON         */
+  /* ---------------------- */
+  .back {
+    margin-top: 20px;
+    text-align: center;
   }
   
   .back a {
-    color: #4CAF50;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Calculator Page Styles */
+  .back a:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ---------------------- */
+  /* 6) CALCULATOR STYLES   */
+  /* ---------------------- */
   .calculator-container {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
   }
   
   #display {
@@ -113,10 +191,11 @@ body {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
   }
   
   .calc-btn:hover {
     background-color: #45a049;
+    transform: translateY(-3px);
   }
   
