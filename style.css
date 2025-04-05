@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
   
     /* A vibrant, modern gradient background */
-    background: linear-gradient(to bottom, #141E30, #243B55);
+    background: linear-gradient(to bottom, #000000, #243B55);
     min-height: 100vh;
     overflow-x: hidden;
   
@@ -52,6 +52,7 @@ body {
   }
   
   .greetings {
+    color: white;
     text-align: center;
     /* Optional semi-transparent background if you want a highlight
        behind the greeting area. You can remove or adjust as needed. */
@@ -64,10 +65,13 @@ body {
   /* 3) BUTTONS             */
   /* ---------------------- */
   .buttons{
-    padding-top: 10px;
+    padding-top: 20px;
   }
   .button-container {
     margin-top: 20px;
+  }
+  .themeheading{
+    padding-top: 20px;
   }
   
   .big-button {
@@ -82,7 +86,7 @@ body {
   }
   
   .big-button:hover {
-    background-color: #1a2061;
+    background-color: #1e1f64;
     transform: translateY(-3px);
   }
   
@@ -99,7 +103,7 @@ body {
   }
   
   .flashcard {
-    background-color: #000dff;
+    background-color: #1e1f64;
     width: 300px;
     height: 200px;
     margin: 20px auto;
@@ -120,7 +124,7 @@ body {
     margin: 0 10px;
     border: none;
     border-radius: 5px;
-    background-color: #000dff;
+    background-color: #1e1f64;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
@@ -128,7 +132,7 @@ body {
   }
   
   .buttons button:hover {
-    background-color: #000dff;
+    background-color: #1e1f64;
     transform: translateY(-3px);
   }
   
@@ -144,7 +148,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #000dff;
+    background-color: #1e1f64;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 1em;
@@ -153,7 +157,7 @@ body {
   }
   
   .back a:hover {
-    background-color: #000dff;
+    background-color: #1e1f64;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
@@ -192,7 +196,7 @@ body {
   .calc-btn {
     padding: 20px;
     font-size: 1.2em;
-    background-color: #001aff;
+    background-color: #1e1f64;
     border: none;
     border-radius: 5px;
     color: #fff;
