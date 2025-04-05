@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
       { question: "What is the capital of France?", answer: "Paris" },
       { question: "What is 2 + 2?", answer: "4" },
       { question: "What color is the sky?", answer: "Blue" },
-      {question: "Who was "}
+      {question: "Who was "},
+      { question: "Where is the empire state building located", answer: "New York City"},
     ];
   
     let currentCard = 0;
